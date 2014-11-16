@@ -85,7 +85,7 @@ export PATH=$PATH:/SDKs/android-sdk-macosx/platform-tools
 # Personal aliases
 alias ls='ls -lha'
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -w'
-alias webserve='node /Users/Shared/Developer/nvm/v0.10.32/lib/node_modules/webserver/webserver.js'
+alias webserve='node /Users/petergoes/.local/lib/node_modules/webserver/webserver.js'
 alias vimhttp='vim /Applications/MAMP/conf/apache/httpd.conf'
 
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
