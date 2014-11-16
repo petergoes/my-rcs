@@ -78,22 +78,20 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/deployd/bin
 # Personal exports
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-export PATH="/Users/Shared/Developer/nvm/v0.10.32/bin:$PATH"
-export PATH="/Users/Shared/Developer/sdk/android-sdk-macosx/tools:$PATH"
-export PATH="/Users/Shared/Developer/sdk/android-sdk-macosx/platform-tools:$PATH"§
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$PATH:/SDKs/android-sdk-macosx/tools
+export PATH=$PATH:/SDKs/android-sdk-macosx/platform-tools
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Personal aliases
 alias ls='ls -lha'
-alias startworking='hdiutil attach -mountpoint /Volumes/Voorhoede ~/.save.sparsebundle'
-alias expfolder='cd /Volumes/Voorhoede/www/_experiments'
-alias wwwfolder='cd /Volumes/Voorhoede/www/'
-alias clientfolder='cd /Volumes/Voorhoede/external-clients/'
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -w'
 alias webserve='node /Users/Shared/Developer/nvm/v0.10.32/lib/node_modules/webserver/webserver.js'
+alias vimhttp='vim /Applications/MAMP/conf/apache/httpd.conf'
 
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
