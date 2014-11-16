@@ -1,5 +1,5 @@
 # My zshrc
-I have this repo for my own convenienace. It contains only my .zshrc file so that I can keep my Terminal windows in sync accross my devices.
+I have this repo for my own convenience. It contains only my .zshrc file so that I can keep my Terminal windows in sync accross my devices.
 
 ## oh-my-zsh
 This .zshrc file is taken from the Oh-my-zsh project found [here](http://ohmyz.sh/).
