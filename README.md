@@ -5,7 +5,7 @@ I have this repo for my own convenience. It contains only my .*rc files so that 
 My .zshrc file
 
 ### oh-my-zsh
-This .zshrc file is taken from the Oh-my-zsh project found [here](http://ohmyz.sh/).
+This .zshrc file is taken from the Oh-my-zsh project found [here](http://ohmyz.sh/). Needs to be installed.
 
 ### jilles.me blogpost
 This ( http://jilles.me/badassify-your-terminal-and-shell/ ) blogpost helped me setup my current system
