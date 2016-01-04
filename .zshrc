@@ -5,7 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="mh"
+ZSH_THEME="pg"
+#ZSH_THEME="mh"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -26,7 +27,7 @@ ZSH_THEME="mh"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -45,13 +46,13 @@ ZSH_THEME="mh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git github npm sublime)
+plugins=(git github npm sublime jump thefuck)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/deployd/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/deployd/bin:/Users/petergoes/_shellscripts"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -77,23 +78,37 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/deployd/bin
 
 # Personal exports
 export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-export PATH="/Users/Shared/Developer/nvm/v0.10.32/bin:$PATH"
+export LSCOLORS=bxfxcxdxbxegedabagaced
 export PATH="/Users/Shared/Developer/sdk/android-sdk-macosx/tools:$PATH"
-export PATH="/Users/Shared/Developer/sdk/android-sdk-macosx/platform-tools:$PATH"§
+#export PATH="/Users/Shared/Developer/nvm/v0.10.32/bin:$PATH"
+export PATH="/Users/Shared/Developer/nvm/versions/v4.2.2/bin:$PATH"
+export PATH="/Users/Shared/Developer/sdk/android-sdk-macosx/platform-tools:$PATH"
+export PATH="/Users/Shared/Developer/sdk/android-sdk-macosx/bin:$PATH"
+export PATH="/Users/petergoes/.gem/ruby/2.0.0/bin:$PATH"
+export ANDROID_HOME="/Users/Shared/Developer/sdk/android-sdk-macosx/"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls='ls -lha'
+alias ls='ls -lhaF'
 alias startworking='hdiutil attach -mountpoint /Volumes/Voorhoede ~/.save.sparsebundle'
 alias expfolder='cd /Volumes/Voorhoede/www/_experiments'
 alias wwwfolder='cd /Volumes/Voorhoede/www/'
 alias clientfolder='cd /Volumes/Voorhoede/external-clients/'
+alias presentations='cd ~/Documents/_presentations'
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -w'
 alias webserve='node /Users/Shared/Developer/nvm/v0.10.32/lib/node_modules/webserver/webserver.js'
+alias showHiddenFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideHiddenFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias writer="open $1 -a /Applications/ia\ Writer.localized/iA\ Writer.app"
+alias lst="tree --dirsfirst --filelimit 20 -FC"
+alias ip="ipconfig getifaddr en0"
 
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# export NVM_DIR="/Users/petergoes/.nvm"
+export NVM_DIR="/Users/Shared/Developer/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
