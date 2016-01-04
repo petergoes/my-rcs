@@ -1,0 +1,43 @@
+[core]
+	excludesfile = /Users/petergoes/.gitignore_global
+	autocrlt = input
+	pager = cat
+[user]
+	name = Peter Goes
+	email = petergoes@gmail.com
+[push]
+	default = simple
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = auto
+	pager = true
+[color "status"]
+	added = green
+    changed = red
+	untracked = cyan
+[pager]
+	diff =
+[mergetool]
+	keepBackup = false
+[alias]
+	st = status -s
+	co = checkout
+	lg = log --oneline --graph --decorate -n 50
+	lga = log --oneline --graph --decorate --all -n 50
+	ca = !git add -A && git commit
+	wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+	staged = diff --name-status --cached
+	nonstaged = diff --name-status
+	rev = "!sh -c 'git merge --no-ff --no-commit $0; git mergetool'"
+[merge]
+[diff]
+#	external = /usr/local/bin/git_diff_wrapper
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
